@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://lingmacker.github.io</id>
-    <title>Gridea</title>
-    <updated>2021-01-21T14:43:44.433Z</updated>
+    <title>LingMacker</title>
+    <updated>2021-01-21T14:53:17.505Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://lingmacker.github.io"/>
     <link rel="self" href="http://lingmacker.github.io/atom.xml"/>
     <subtitle>每个人都有所依赖。</subtitle>
     <logo>http://lingmacker.github.io/images/avatar.png</logo>
     <icon>http://lingmacker.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Gridea</rights>
+    <rights>All rights reserved 2021, LingMacker</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>http://lingmacker.github.io/post/hello-gridea/</id>
