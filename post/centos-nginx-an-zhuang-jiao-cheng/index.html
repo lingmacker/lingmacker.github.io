@@ -4,7 +4,7 @@
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<title>关于 | LingMacker</title>
+<title>CentOS Nginx 安装教程 | LingMacker</title>
 
 <link rel="shortcut icon" href="http://lingmacker.github.io/favicon.ico?v=1611318064148">
 
@@ -89,22 +89,98 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    关于
+                    CentOS Nginx 安装教程
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2019-01-25 ·
+                        · 2021-01-22 ·
                     </time>
                     
                 </div>
                 <div class="post-content">
-                    <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
+                    <h4 id="1-安装依赖">1. 安装依赖</h4>
+<p>yum -y install gcc pcre-devel zlib zlib-devel</p>
+<h4 id="2-选择安装">2. 选择安装</h4>
+<p>yum -y install openssl openssl-devel</p>
+<h4 id="3-下载nginx">3. 下载nginx</h4>
+<p><a href="http://nginx.org/en/download.html">Nginx 下载官网</a></p>
+<p>使用命令： wget http://nginx.org/download/nginx-1.16.1.tar.gz</p>
+<h4 id="4-解压">4. 解压</h4>
+<p>tar -zxvf nginx-1.16.1.tar.gz</p>
+<h4 id="5-运行安装">5. 运行安装</h4>
+<p>进入解压后的目录，运行   <code>./configure --prefix=/usr/local/nginx</code></p>
+<p>接下来执行 <code>make</code></p>
+<p>继续执行 <code>make install</code></p>
+<p>然后安装成功！</p>
+<h4 id="6-nginx-常用命令">6. nginx 常用命令</h4>
+<p><code>/usr/local/nginx/sbin/nginx -t</code>  # 测试配置文件</p>
+<p><code>/usr/local/nginx/sbin/nginx</code>  # 启动服务</p>
+<p><code>/usr/local/nginx/sbin/nginx - s stop</code>  # 停止服务</p>
+<p><code>/usr/local/nginx/sbin/nginx - s reload</code>  # 重启服务</p>
+<p><code>ps -ef | grep nginx</code>  # 查看进程</p>
+<p><code>kill -HUP</code> 进程号  # 平滑重启</p>
+<h4 id="7-nginx-自启文件配置">7. nginx 自启文件配置</h4>
+<p><strong>vim /usr/lib/systemd/system/nginx.service</strong></p>
+<pre><code class="language-bash">[Unit]
+Description=nginx
+After=network.target
+  
+[Service]
+Type=forking
+ExecStartPre=/usr/local/nginx/sbin/nginx -t -c /usr/local/nginx/conf/nginx.conf
+ExecStart=/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s QUIT $MAINPID
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<h4 id="8-配置域名映射">8. 配置域名映射</h4>
+<p><strong>sudo vim /usr/local/nginx/conf/nginx.conf</strong></p>
+<p>在最后一个结束花括号前增加：include vhost/*.conf;   # 后面有分号</p>
+<p>在conf目录下创建vhost文件夹，以后配置文件就可以编写在vhost中了。</p>
+<blockquote>
+<p>conf 示例：</p>
+<pre><code class="language-json"># 配置映射到某一文件夹
+server {
+listen 80;
+autoindex off;
+server_name img.xxx.com; # 映射ip
+access_log /usr/local/nginx/logs/access.log combined;
+index index.html index.htm index.jsp index.php;
+#error_page 404 /404.html;
+if ( $query_string ~* &quot;.*[\;'\&lt;\&gt;].*&quot; ){
+   return 404;
+}
+
+location / {
+   root /ftpfile/; # 映射的目标文件夹
+   add_header Access-Control-Allow-Origin *;
+}
+}
+</code></pre>
+<pre><code class="language-json"># 配置映射到某一网址
+server {
+ default_type 'text/html';
+ charset utf-8;
+ listen 80;
+ autoindex on;
+ server_name www.xxx.com;  # 映射ip
+ access_log /usr/local/nginx/logs/access.log combined;
+ index index.html index.htm index.jsp index.php;
+ #error_page 404 /404.html;
+ if ( $query_string ~* &quot;.*[\;'\&lt;\&gt;].*&quot; ){
+     return 404;
+ }
+
+ location / {
+     proxy_pass http://127.0.0.1:8080;
+     add_header Access-Control-Allow-Origin *;
+ }
+}
+</code></pre>
 </blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<h2 id="联系我呀">📬 联系我呀</h2>
 
                 </div>
             </article>
