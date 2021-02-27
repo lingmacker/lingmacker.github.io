@@ -1,163 +1,213 @@
-<html>
-<head>
-    <meta charset="utf-8"/>
-<meta name="description" content=""/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!doctype html>
+<html amp lang="">
 
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="description" content="每个人都有所依赖" />
+<link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+<link rel="preconnect dns-prefetch" href="https://cdn.jsdelivr.net/" crossorigin>
+<script async src="https://cdn.ampproject.org/v0.js"></script>
 <title>LingMacker</title>
 
-<link rel="shortcut icon" href="https://lingmacker.github.io/favicon.ico?v=1614396157606">
 
-<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://lingmacker.github.io/styles/main.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+  
 
-<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+    
 
-<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
-<!-- DEMO JS -->
-<!--<script src="media/scripts/index.js"></script>-->
 
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<link rel="canonical" href="https://lingmacker.github.io" />
+<link rel="shortcut icon" href="https://lingmacker.github.io/favicon.ico?v=1614396311244">
+
+<meta name="author" content="">
+
+<meta itemprop="name" content="LingMacker">
+<meta itemprop="description" content="每个人都有所依赖">
+<meta itemprop="image" content="">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LingMacker">
+<meta name="twitter:description" content="每个人都有所依赖">
+<meta name="twitter:image" content="" />
+<meta name="twitter:image:alt" content="LingMacker" />
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lingmacker.github.io">
+<meta property="og:title" content="LingMacker">
+<meta property="og:description" content="每个人都有所依赖">
+<meta property="og:image" content="">
+<meta property="og:image:alt" content="LingMacker" />
+<meta property="og:site_name" content="LingMacker">
+<meta property="og:locale" content="zh_CN">
+<meta property="tag" content="LingMacker" />
+
+
+
+
+
+
+<link rel="alternate" type="application/atom+xml" title="LingMacker - Atom Feed" href="https://lingmacker.github.io/atom.xml">
+
+      
+      
 
 
 </head>
-<body>
-<div class="main gt-bg-theme-color-first">
-    <div class="main-content">
-        <nav class="navbar navbar-expand-lg">
-    <div class="navbar-brand">
-        <img class="user-avatar" src="/images/avatar.png" alt="头像">
-        <div class="site-name gt-c-content-color-first">
-            LingMacker
-        </div>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav mr-auto" style="text-align: center">
-            
-                <div class="nav-item">
-                    
-                        <a href="/" class="menu gt-a-link">
-                            首页
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/archives" class="menu gt-a-link">
-                            归档
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/tags" class="menu gt-a-link">
-                            标签
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/post/about" class="menu gt-a-link">
-                            关于
-                        </a>
-                    
-                </div>
-            
-        </div>
-        <div style="text-align: center">
-            <form id="gridea-search-form" style="position: relative" data-update="1614396157606" action="/search/index.html">
-                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
-                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
-            </form>
-        </div>
-    </div>
-</nav>
 
+<body class="home blog">
+  <input type="checkbox" id="header-menu-button">
+  <header id="commonTop">
+  <div class="top-container">
+    <div class="title-menus-area">
+      <a class="blog-title" href="https://lingmacker.github.io">LingMacker</a>
+      <label for="header-menu-button" class="top-menus">
+        <nav class="menu-menu-1-container">
+          <ul id="menu-menu-1" class="menu">
+            
+            
+            <li>
+              <a href="/" aria-current="page">首页</a></li>
+            
+            
+            
+            <li>
+              <a href="/archives" aria-current="page">归档</a></li>
+            
+            
+            
+            <li>
+              <a href="/tags" aria-current="page">标签</a></li>
+            
+            
+            
+            <li>
+              <a href="/post/about" aria-current="page">关于</a></li>
+            
+            
+          </ul>
+        </nav>
+      </label>
+    </div>
+    
+  </div>
+</header>
 
-        <div class="post-list-container">
-    <div class="post-inner">
+  <main>
+    <div class="main-container">
+  <div class="post-list">
+    
+    <article class="list-box post type-post status-publish format-standard has-post-thumbnail hentry category-xiaoqiao">
+      
+      <a href="https://lingmacker.github.io/post/centos-nginx-an-zhuang-jiao-cheng/" class="title-img">
+        <amp-img class="contain" src="https://lingmacker.github.io/post-images/centos-nginx-an-zhuang-jiao-cheng.png" layout="fill" alt="CentOS Nginx 安装教程"></amp-img>
+      </a>
+      
+
+      <div class="post-info">
         
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://lingmacker.github.io/post/centos-nginx-an-zhuang-jiao-cheng/">
-                            <span class="post-title gt-c-content-color-first">CentOS Nginx 安装教程</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2021-01-22 ·
-                        </time>
-                        
-                            <a href="https://lingmacker.github.io/tag/JyXG35_b-/" class="post-tag">
-                                # Linux
-                            </a>
-                        
-                    </div>
-                </div>
-                
-                    <a href="https://lingmacker.github.io/post/centos-nginx-an-zhuang-jiao-cheng/" class="post-feature-image"
-                       style="background-image: url('https://lingmacker.github.io/post-images/centos-nginx-an-zhuang-jiao-cheng.png')">
-                    </a>
-                
+        <div class="flex-box meta-category">
+          <a class="post-cate" href="https://lingmacker.github.io/tag/JyXG35_b-/">Linux</a></div>
+        
+        <h2 class="post-title">
+          <a href="https://lingmacker.github.io/post/centos-nginx-an-zhuang-jiao-cheng/">CentOS Nginx 安装教程</a>
+        </h2>
+        <div class="post-excerpt">
+          
+        </div>
+        <div class="flex-box justify-between">
+          <a href="https://lingmacker.github.io/post/centos-nginx-an-zhuang-jiao-cheng/" class="read-more">阅读更多<span class="iconfont icon-ml-readmore"></span></a>
+          <div class="flex-box post-meta-box">
+            <a class="post-meta" href="https://lingmacker.github.io/post/centos-nginx-an-zhuang-jiao-cheng/#comments"><span class="iconfont icon-mr-postmeta"></span></a>
+            <a class="post-meta" href="https://lingmacker.github.io/post/centos-nginx-an-zhuang-jiao-cheng/"><span class="iconfont icon-mr-postmeta"></span></a>
+            <a class="post-meta" href="https://lingmacker.github.io/post/centos-nginx-an-zhuang-jiao-cheng/"><span
+                class="iconfont icon-mr-postmeta icon-like-sp"></span></a>
+          </div>
+
+          <div class="flex-box post-publish-date">
+            <div class="post-date">
+              22
             </div>
-        
-    </div>
-</div>
+            <div class="post-month">
+              1月                            
+            </div>  
+          </div>
 
-        <div class="pagination-container">
+        </div>
+
+      </div>
+    </article>
     
+
+  </div>
+  <div>
+    <nav class="navigation pagination" role="navigation" aria-label="文章">
+      <h2 class="screen-reader-text">文章导航</h2>
+      <div class="nav-links">
+        
+        
+      </div>
+    </nav>
+  </div>
+</div>
+    <div class="sidebar">
+  <aside id="profile-2" class="widget widget_profile">
+    <div class="profile-box">
+      <div class="profile-avatar">
+        <amp-img src="https://lingmacker.github.io/images/avatar.png?v=1614396311244" alt="avatar"
+          layout="fill"></amp-img>
+      </div>
+      <div class="profile-content">
+        <div class="amp-wp-681d4ff">
+          每个人都有所依赖
+        </div>
+
+      </div>
+    </div>
+  </aside>
+  
     
+
+    
+
+   
+
+  <aside id="linkcat-2" class="widget widget_links">
+  <h4 class="widget-title">友链</h4>
+  <ul class="xoxo blogroll">
+    
+  </ul>
+</aside>
+
+
+</div>
+    <div class="scrolltop-wrap">
+  <span tabindex="0" role="button" class="go-top" on="tap:commonTop.scrollTo(duration=500, position=top)">
+    <span class="iconfont"></span>
+  </span>
 </div>
 
+    
+  </main>
 
-        <div class="site-footer gt-c-content-color-first">
-    <div class="slogan gt-c-content-color-first">每个人都有所依赖</div>
-    <div class="social-container">
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
+  <footer>
+  <div class="footer-container">
+    <div class="footer-menus">
     </div>
-    <div class="footer-info">
-        <a href="https://github.com/getgridea/gridea" target="_blank"></a>
-    </div>
-    <!--div>
-        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
-                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://lingmacker.github.io/atom.xml" target="_blank">RSS</a></a>
-    </div-->
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
+    <div class="footer-copyright">
+      <a href="https://github.com/getgridea/gridea" target="_blank"></a>
+      
+      
 
     </div>
-</div>
+  </div>
+</footer>
+
+  
+  
+
 </body>
+
 </html>
