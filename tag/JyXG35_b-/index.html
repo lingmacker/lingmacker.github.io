@@ -5,18 +5,18 @@
   <meta charset="UTF-8" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta name="keywords" content="">
+<meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="每个人都有所依赖">
-<meta name="theme-color" content="">
+<meta name="theme-color" content="#000">
 <title>LingMacker&#39;s Blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1615375107036">
+<link rel="shortcut icon" href="/favicon.ico?v=1615376117535">
 <link rel="stylesheet" href="/media/css/pisces.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
   href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
   rel="stylesheet" type="text/css">
 
-<link href="/media/hljs/styles/github.css"
+<link href="/media/hljs/styles/default.css"
   rel="stylesheet">
 
 <link rel="stylesheet" href="/styles/main.css">
@@ -63,11 +63,15 @@
           
         </div>
         
+          <p class="subtitle">每个人都有所依赖</p>
+        
       </div>
       <nav class="site-nav" id="site_nav">
         <ul id="nav_ul">
           
             
+            
+              
             
             <li class="nav-item ">
               
@@ -80,6 +84,8 @@
           
             
             
+              
+            
             <li class="nav-item ">
               
               
@@ -90,6 +96,8 @@
             </li>
           
             
+            
+              
             
             <li class="nav-item ">
               
@@ -102,6 +110,8 @@
           
             
             
+              
+            
             <li class="nav-item ">
               
               
@@ -112,6 +122,22 @@
             </li>
           
           
+            
+              <li class="nav-item ">
+                <a href="/friends/" target="_self">
+                  
+                    <i class="fa fa-address-book"></i> 友情链接
+                  
+                </a>
+              </li>
+            
+          
+          
+            <li id="fa_search" class="nav-item">
+              <a href="javascript:void(0);">
+                <i class="fa fa-search"></i> <span class="language" data-lan="search">搜索</span>
+              </a>
+            </li>
           
         </ul>
       </nav>
@@ -180,15 +206,13 @@
   
   
 
-  
-
 
 
 </div>
 </div>
 <script>
   let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = '';
+  let scheme = 'pisces';
   let sidebarWrapper = document.querySelector('.sidebar-wrapper');
   if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
     document.addEventListener('scroll', function(e) {
@@ -258,12 +282,6 @@
   </div>
   
   
-  
-  
-  
-  
-  
-
   
 </div>
 <script>
@@ -393,7 +411,7 @@
   }
 
   // 链接跳转
-  let newWindow = ''
+  let newWindow = 'false'
   if (newWindow === 'true') {
     let links = document.querySelectorAll('.post-body a')
     links.forEach(item => {
@@ -447,6 +465,243 @@
 </script>
   </div>
 </body>
+
+<div class="search-mask" id="search_mask" style="display: none;">
+  <div class="search-box">
+    <div class="search-title">
+      <i class="fa fa-search"></i>
+      <div class="input-box">
+        <input id="search" type="text" class="language" data-lan="search" placeholder="搜索">
+      </div>
+      <i id="close" class="fa fa-times-circle"></i>
+    </div>
+    <div class="stat-box">
+      <span id="stat_count">0</span><span class="language" data-lan="stat">条相关条目，使用了</span><span id="stat_times">0</span><span class="language" data-lan="stat-time">毫秒</span>
+      <hr>
+    </div>
+    <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://lingmacker.github.io/post/centos-nginx-an-zhuang-jiao-cheng/"" data-c="
+          &lt;h4 id=&#34;1-安装依赖&#34;&gt;1. 安装依赖&lt;/h4&gt;
+&lt;p&gt;yum -y install gcc pcre-devel zlib zlib-devel&lt;/p&gt;
+&lt;h4 id=&#34;2-选择安装&#34;&gt;2. 选择安装&lt;/h4&gt;
+&lt;p&gt;yum -y install openssl openssl-devel&lt;/p&gt;
+&lt;h4 id=&#34;3-下载nginx&#34;&gt;3. 下载nginx&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;http://nginx.org/en/download.html&#34;&gt;Nginx 下载官网&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;使用命令： wget http://nginx.org/download/nginx-1.16.1.tar.gz&lt;/p&gt;
+&lt;h4 id=&#34;4-解压&#34;&gt;4. 解压&lt;/h4&gt;
+&lt;p&gt;tar -zxvf nginx-1.16.1.tar.gz&lt;/p&gt;
+&lt;h4 id=&#34;5-运行安装&#34;&gt;5. 运行安装&lt;/h4&gt;
+&lt;p&gt;进入解压后的目录，运行   &lt;code&gt;./configure --prefix=/usr/local/nginx&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;接下来执行 &lt;code&gt;make&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;继续执行 &lt;code&gt;make install&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;然后安装成功！&lt;/p&gt;
+&lt;h4 id=&#34;6-nginx-常用命令&#34;&gt;6. nginx 常用命令&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;/usr/local/nginx/sbin/nginx -t&lt;/code&gt;  # 测试配置文件&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/usr/local/nginx/sbin/nginx&lt;/code&gt;  # 启动服务&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/usr/local/nginx/sbin/nginx - s stop&lt;/code&gt;  # 停止服务&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/usr/local/nginx/sbin/nginx - s reload&lt;/code&gt;  # 重启服务&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ps -ef | grep nginx&lt;/code&gt;  # 查看进程&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;kill -HUP&lt;/code&gt; 进程号  # 平滑重启&lt;/p&gt;
+&lt;h4 id=&#34;7-nginx-自启文件配置&#34;&gt;7. nginx 自启文件配置&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;vim /usr/lib/systemd/system/nginx.service&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[Unit]
+Description=nginx
+After=network.target
+  
+[Service]
+Type=forking
+ExecStartPre=/usr/local/nginx/sbin/nginx -t -c /usr/local/nginx/conf/nginx.conf
+ExecStart=/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s QUIT $MAINPID
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;8-配置域名映射&#34;&gt;8. 配置域名映射&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;sudo vim /usr/local/nginx/conf/nginx.conf&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在最后一个结束花括号前增加：include vhost/*.conf;   # 后面有分号&lt;/p&gt;
+&lt;p&gt;在conf目录下创建vhost文件夹，以后配置文件就可以编写在vhost中了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;conf 示例：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;# 配置映射到某一文件夹
+server {
+listen 80;
+autoindex off;
+server_name img.xxx.com; # 映射ip
+access_log /usr/local/nginx/logs/access.log combined;
+index index.html index.htm index.jsp index.php;
+#error_page 404 /404.html;
+if ( $query_string ~* &amp;quot;.*[\;&#39;\&amp;lt;\&amp;gt;].*&amp;quot; ){
+   return 404;
+}
+
+location / {
+   root /ftpfile/; # 映射的目标文件夹
+   add_header Access-Control-Allow-Origin *;
+}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-json&#34;&gt;# 配置映射到某一网址
+server {
+ default_type &#39;text/html&#39;;
+ charset utf-8;
+ listen 80;
+ autoindex on;
+ server_name www.xxx.com;  # 映射ip
+ access_log /usr/local/nginx/logs/access.log combined;
+ index index.html index.htm index.jsp index.php;
+ #error_page 404 /404.html;
+ if ( $query_string ~* &amp;quot;.*[\;&#39;\&amp;lt;\&amp;gt;].*&amp;quot; ){
+     return 404;
+ }
+
+ location / {
+     proxy_pass http://127.0.0.1:8080;
+     add_header Access-Control-Allow-Origin *;
+ }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+">CentOS Nginx 安装教程</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="https://lingmacker.github.io/post/about/"" data-c="
+          &lt;h3 id=&#34;小小全能程序猿一枚&#34;&gt;小小全能程序猿一枚&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;喜欢打羽毛球&lt;/li&gt;
+&lt;li&gt;锻炼&lt;/li&gt;
+&lt;li&gt;吃&lt;/li&gt;
+&lt;li&gt;玩&lt;/li&gt;
+&lt;/ul&gt;
+">关于</a>
+      </div>
+      
+    </div>
+    <div class="page">
+      <div id="page_ul"></div>
+    </div>
+  </div>
+</div>
+<script>
+  !function () {
+    let searchMask = document.querySelector('#search_mask');
+    let result = document.querySelector('#result');
+    let items = document.querySelectorAll('.item');
+    let searchBox = document.querySelector('#search');
+    let statCount = document.querySelector('#stat_count');
+    let statTimes = document.querySelector('#stat_times');
+    let pageUl = document.querySelector('#page_ul');
+    let close = document.querySelector('#close');
+    
+    close.addEventListener('click', function() {
+      searchMask.style = 'display: none;'
+    })
+
+    let finds = [];
+    let contents = [];
+    let pageSize = 10;
+    items.forEach(item => {
+      let a = item.querySelector('a');
+      contents.push({
+        title: a.innerText,
+        details: a.dataset.c,
+        link: a.href
+      })
+      item.remove();
+    })
+
+    function insertStr(soure, start, count) {
+      let newStr = soure.substr(start, count);
+      return soure.slice(0, start) + '<em>' + newStr + '</em>' + soure.slice(start + count);
+    }
+
+    pageUl.addEventListener('click', function(event) {
+      let target = event.target;
+      if (target.__proto__ === HTMLSpanElement.prototype) {
+        appendResults(parseInt(target.dataset.i));
+      }
+    })
+
+    function appendResults(index) {
+      let htmlResult = '';
+      let start = index || 0;
+      let end = Math.min(start + pageSize, finds.length);
+      for (let i = start; i < end; i++) {
+        const current = finds[i];
+        let html = current.title;
+        let sum = 0;
+        let positions = current.positions;
+        positions.forEach(position => {
+          html = insertStr(html, position.start + sum, position.count);
+          sum += 9;
+        })
+        htmlResult += `<div class="item"><a class="result-title" href="${current.link}">${html}</a></div>`;
+      }
+      result.innerHTML = htmlResult;
+      pageUl.innerHTML = '';
+      let count = finds.length / pageSize;
+      let lis = '';
+      if (start !== 0) {
+        lis += `<span class="fa fa-angle-left" data-i='${start - 1}'></span>`;
+      }
+      for (let i = 0; i < count; i++) {
+        lis += `<span class='${i === start?'current':''}' data-i='${i}'>${i+1}</span>`;     
+      }
+      if (start+1 < count) {
+        lis += `<span class="fa fa-angle-right" data-i='${start+1}'></span>`;  
+      }
+      pageUl.innerHTML = lis;
+    }
+
+    function search(delay) {
+      let timer = null
+      return function () {
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+          let start = Date.now();
+          let segments = searchBox.value.split(' ').filter(c => c != '');
+          if (segments.length <= 0) {
+            return;
+          }
+          finds = [];
+          let htmlResult = '';
+          contents.forEach(content => {
+            let title = content.title;
+            let positions = [];
+            let find = false;
+            segments.forEach((segment) => {
+              if (content.title.includes(segment)) {
+                find = true;
+                positions.push({
+                  start: content.title.indexOf(segment),
+                  count: segment.length
+                })
+              } else if (content.details.includes(segment)) {
+                find = true;
+              }
+            });
+            if (find) {
+              finds.push({
+                title: content.title,
+                link: content.link,
+                positions
+              });
+            }
+          })
+          appendResults(0);
+          statCount.textContent = finds.length;
+          statTimes.textContent = Date.now() - start;
+        }, delay)
+      }
+    }
+    searchBox.addEventListener('input', search(200));
+  }()
+</script>
 
 <input hidden id="copy" />
 <script>
