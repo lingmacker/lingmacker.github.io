@@ -1,0 +1,7 @@
+baseURL = "https://lingmacker-github-io.vercel.app/"
+languageCode = 'zh-Hans'
+title = "LM's Blog"
+theme = "yinyang"
+
+[params]
+headTitle = "LingMacker's Blog"

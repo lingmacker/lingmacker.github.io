@@ -1,0 +1,7 @@
+.env
+.env.build
+resources
+.hugo_build.lock
+public
+.vscode
+*.DS_Store
