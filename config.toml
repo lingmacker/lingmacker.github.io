@@ -2,6 +2,11 @@ baseURL = "https://lingmacker-github-io.vercel.app/"
 languageCode = 'zh-Hans'
 title = "LM's Blog"
 theme = "yinyang"
+enableRobotsTXT = true
+
+[author]
+  name = "LingMacker"
+  homepage = "https://www.lingmacker.com"
 
 [params]
 headTitle = "LM's Blog"
