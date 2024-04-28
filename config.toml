@@ -13,4 +13,4 @@ headTitle = "LM's Blog"
 description = "Everyone is attached something."
 favicon = "/favicon.png"
 
-disqus = "lingmacker"
+# disqus = "lingmacker"
