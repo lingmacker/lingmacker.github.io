@@ -1,0 +1,35 @@
+name: Auto Merge Image Compress PR
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize  # 当 PR 更新时重新检查条件
+      - reopened
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 检查触发的 PR 是否是由特定工作流创建
+      - name: Check if PR is from Image Compress Workflow
+        id: check_pr
+        run: |
+          if [[ "${{ github.event.pull_request.title }}" == "Auto Compress Images" ]]; then
+            echo "is_compress_pr=true" >> $GITHUB_ENV
+          else
+            echo "is_compress_pr=false" >> $GITHUB_ENV
+          fi
+
+      # 自动合并符合条件的 PR
+      - name: Auto-merge PR
+        if: env.is_compress_pr == 'true'
+        run: |
+          gh pr merge ${{ github.event.pull_request.number }} \
+            --merge \
+            --repo ${{ github.repository }} \
+            --admin \
+            --confirm
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
