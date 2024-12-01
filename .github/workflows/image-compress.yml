@@ -10,24 +10,24 @@ on:
   workflow_dispatch:
   pull_request:
    paths:
-      - '**/*.jpg'
-      - '**/*.jpeg'
-      - '**/*.png'
-      - '**/*.webp'
-      - '**/*.JPG'
-      - '**/*.JPEG'
-      - '**/*.PNG'
+      - '**.jpg'
+      - '**.jpeg'
+      - '**.png'
+      - '**.webp'
+      - '**.JPG'
+      - '**.JPEG'
+      - '**.PNG'
   push:
     branches:
       - main
     paths:
-      - '**/*.jpg'
-      - '**/*.jpeg'
-      - '**/*.png'
-      - '**/*.webp'
-      - '**/*.JPG'
-      - '**/*.JPEG'
-      - '**/*.PNG'
+      - '**.jpg'
+      - '**.jpeg'
+      - '**.png'
+      - '**.webp'
+      - '**.JPG'
+      - '**.JPEG'
+      - '**.PNG'`
 jobs:
   build:
     name: calibreapp/image-actions
