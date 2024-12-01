@@ -1,7 +1,10 @@
 # Sample workflow for building and deploying a Hugo site to GitHub Pages
-name: Deploy Hugo site to Pages
+name: Hugo Deploy
 
 on:
+  workflow_run:
+    workflows: Auto-Merge-Image-Compress-PR # 需要监听的流程名字
+    types: completed
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]

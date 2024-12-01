@@ -1,4 +1,4 @@
-name: Auto Merge Image Compress PR
+name: Auto-Merge-Image-Compress-PR
 
 on:
   pull_request:
@@ -27,7 +27,7 @@ jobs:
         if: env.is_compress_pr == 'true'
         run: |
           gh pr merge ${{ github.event.pull_request.number }} \
-            --merge \
+            --rebase \
             --repo ${{ github.repository }} \
             --admin \
             --confirm
