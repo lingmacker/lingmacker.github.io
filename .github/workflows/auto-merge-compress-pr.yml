@@ -1,4 +1,4 @@
-name: Auto Merge Image Compress PR
+name: Auto-Merge-Image-Compress-PR
 
 on:
   pull_request:
@@ -16,7 +16,7 @@ jobs:
       - name: Check if PR is from Image Compress Workflow
         id: check_pr
         run: |
-          if [[ "${{ github.event.pull_request.title }}" == "Auto Compress Images" ]]; then
+          if [[ "${{ github.event.pull_request.title }}" == "*Compress Images*" ]]; then
             echo "is_compress_pr=true" >> $GITHUB_ENV
           else
             echo "is_compress_pr=false" >> $GITHUB_ENV
@@ -27,7 +27,7 @@ jobs:
         if: env.is_compress_pr == 'true'
         run: |
           gh pr merge ${{ github.event.pull_request.number }} \
-            --merge \
+            --rebase \
             --repo ${{ github.repository }} \
             --admin \
             --confirm
