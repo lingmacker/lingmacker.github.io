@@ -5,18 +5,14 @@
 # - at 11 PM every Sunday in anything gets missed with any of the above scenarios
 # For Pull Requests, the images are added to the PR.
 # For other scenarios, a new PR will be opened if any images are compressed.
-name: Compress images
+name: Compress-images
 on:
-  workflow_dispatch:
   pull_request:
-   paths:
+    paths:
       - '**.jpg'
       - '**.jpeg'
       - '**.png'
       - '**.webp'
-      - '**.JPG'
-      - '**.JPEG'
-      - '**.PNG'
   push:
     branches:
       - main
@@ -25,9 +21,7 @@ on:
       - '**.jpeg'
       - '**.png'
       - '**.webp'
-      - '**.JPG'
-      - '**.JPEG'
-      - '**.PNG'`
+  workflow_dispatch:
 jobs:
   build:
     name: calibreapp/image-actions

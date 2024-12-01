@@ -1,6 +1,9 @@
-name: Auto Merge Image Compress PR
+name: Auto-Merge-Image-Compress-PR
 
 on:
+  workflow_run:
+    workflows: Compress-images # 需要监听的流程名字
+    types: completed
   pull_request:
     types:
       - opened
